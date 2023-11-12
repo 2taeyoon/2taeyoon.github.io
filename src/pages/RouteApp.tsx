@@ -4,7 +4,7 @@ import React from 'react';
 const RouteApp = () => {
   return (
     <div className="RouteApp">
-      ss
+      
     </div>
   );
 }
