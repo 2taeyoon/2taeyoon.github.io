@@ -2,12 +2,8 @@ import React from 'react';
 // import { Routes, Route } from "react-router-dom";
 
 const RouteApp = () => {
-  return (
-    <div className="RouteApp">
-      
-    </div>
-  );
-}
+  return <div className="RouteApp"></div>;
+};
 // const Advertisement = lazy(() => import("./Admin/Advertisement.jsx"));
 // const routes = [
 //   // 모든 사용자가 접근 가능
@@ -32,7 +28,7 @@ const RouteApp = () => {
 //   { path: "/my", element: <My />, condition: user => user },
 //   { path: "/my/*", element: <My />, condition: user => user },
 
-//   // 로그인한 사용자만 접근 가능 
+//   // 로그인한 사용자만 접근 가능
 //   { path: "/community/write", element: <WritingPage />, condition: user => user },
 
 //   // 관리자만 접근 가능

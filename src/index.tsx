@@ -7,14 +7,10 @@ import './style/pretendard.css';
 import './style/reset.css';
 import './style/style.scss';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    
-      <RouteApp />
-    
+    <RouteApp />
   </React.StrictMode>
 );
 
