@@ -1,8 +1,14 @@
 import React from 'react';
-// import { Routes, Route } from "react-router-dom";
+import MyImage from '../../public/logo512.png';
 
-const RouteApp = () => {
-  return <div className="RouteApp"></div>;
+
+const RouteApp: React.FC = () => {
+  return(
+    <div className="RouteApp">
+      <img src={MyImage} alt="sad" />
+      <div>안녕하세요 반갑습니다.</div>
+    </div>
+  );
 };
 // const Advertisement = lazy(() => import("./Admin/Advertisement.jsx"));
 // const routes = [
