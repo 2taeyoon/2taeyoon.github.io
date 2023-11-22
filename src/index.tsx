@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import RouteApp from './pages/RouteApp';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import RouteApp from "./pages/RouteApp";
+import reportWebVitals from "./reportWebVitals";
 // import { BrowserRouter as Router } from 'react-router-dom';
-import './style/pretendard.css';
-import './style/reset.css';
-import './style/style.scss';
+import "./styles/pretendard.css";
+import "./styles/reset.css";
+import "./styles/style.scss";
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
@@ -16,7 +16,7 @@ if (rootElement) {
     </React.StrictMode>
   );
 } else {
-  console.error('Root element not found');
+  console.error("Root element not found");
 }
 
 // If you want to start measuring performance in your app, pass a function

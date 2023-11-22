@@ -1,11 +1,13 @@
-import React from 'react';
-import MyImage from '../../public/logo512.png';
-
+import React from "react";
+import MyImage from "../../public/logo512.png";
 
 const RouteApp: React.FC = () => {
-  return(
+  return (
     <div className="RouteApp">
-      <img src={MyImage} alt="sad" />
+      <img
+        src={MyImage}
+        alt="sad"
+      />
       <div>안녕하세요 반갑습니다.</div>
     </div>
   );

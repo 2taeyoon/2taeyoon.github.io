@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
-const webpack = require('webpack');
+const webpack = require("webpack");
 
 module.exports = (argv) => {
   const prod = argv.mode === "production";
@@ -12,16 +12,16 @@ module.exports = (argv) => {
     entry: "./src/index.tsx",
     output: {
       path: path.join(__dirname, "/build"),
-      filename: "index.js",
+      filename: "index.js"
     },
     devServer: {
       port: 3000,
-      hot: true,
+      hot: true
     },
     resolve: {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       alias: {
-        Pub: path.resolve(__dirname, 'public/'),
+        Pub: path.resolve(__dirname, "public/")
         // Assets: path.resolve(__dirname, 'src/assets/') // 'Assets' 별칭으로 src/assets 폴더 참조
       }
     },
@@ -30,17 +30,17 @@ module.exports = (argv) => {
         {
           test: /\.tsx?$/,
           exclude: /node_modules/,
-          use: ["babel-loader", "ts-loader"],
+          use: ["babel-loader", "ts-loader"]
         },
         {
           test: /\.css$/,
           exclude: /node_modules/,
-          use: ['style-loader', 'css-loader']
+          use: ["style-loader", "css-loader"]
         },
         {
           test: /\.scss$/,
           exclude: /node_modules/,
-          use: ['style-loader', 'css-loader', 'sass-loader']
+          use: ["style-loader", "css-loader", "sass-loader"]
         },
         // {
         //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -50,19 +50,34 @@ module.exports = (argv) => {
         //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
         //   type: 'asset/resource',
         // }
+				{
+          test: /\.html$/i,
+          use: [
+            {
+              loader: "html-loader",
+              options: {
+                sources: {
+									list: [
+										{ tag: "link", attribute: "href", type: "src" },
+									]
+								}
+              }
+            }
+          ]
+        },
         {
           test: /\.(jpg|jpeg|gif|png|svg|ico)?$/,
           use: [
             {
-              loader: 'url-loader',
+              loader: "url-loader",
               options: {
                 limit: 10000,
-                fallback: 'file-loader',
-                name: 'image/[name].[ext]',
-              },
+                fallback: "file-loader",
+                name: "image/[name].[ext]"
+              }
             }
-          ],
-        },
+          ]
+        }
         // {
         //   test: /\.(woff|woff2|eot|ttf|otf)$/,
         //   use: [
@@ -76,20 +91,24 @@ module.exports = (argv) => {
         //     },
         //   ],
         // },
-      ],
+      ]
     },
     plugins: [
       new webpack.ProvidePlugin({
-        React: "react",
+        React: "react"
       }),
       new HtmlWebpackPlugin({
-        template: './public/index.html',
-        minify: process.env.NODE_ENV === 'production' ? {
-          collapseWhitespace: true, // 빈칸 제거
-          removeComments: true, // 주석 제거
-        } : false,
+        template: "./public/index.html",
+				favicon: "./public/test.png",
+        minify:
+          process.env.NODE_ENV === "production"
+            ? {
+                collapseWhitespace: true,
+                removeComments: true
+              }
+            : false
       }),
-      new CleanWebpackPlugin(),
-    ],
-  }
+      new CleanWebpackPlugin()
+    ]
+  };
 };
