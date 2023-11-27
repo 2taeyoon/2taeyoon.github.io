@@ -1,17 +1,21 @@
 import React from "react";
-import MyImage from "../../public/logo512.png";
+//import MyImage from "../../public/logo192.png";
 
 const RouteApp: React.FC = () => {
   return (
     <div className="RouteApp">
-      <img
+      {/* <img
         src={MyImage}
-        alt="sad"
-      />
-      <div>안녕하세요 반갑습니다.</div>
+        alt="img"
+      /> */}
+      <div>📸이미지를 출력해보자📸</div>
     </div>
   );
 };
+
+
+
+
 // const Advertisement = lazy(() => import("./Admin/Advertisement.jsx"));
 // const routes = [
 //   // 모든 사용자가 접근 가능

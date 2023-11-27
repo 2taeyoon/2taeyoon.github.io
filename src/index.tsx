@@ -2,22 +2,32 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import RouteApp from "./pages/RouteApp";
 import reportWebVitals from "./reportWebVitals";
-// import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import "./styles/pretendard.css";
 import "./styles/reset.css";
 import "./styles/style.scss";
 
-const rootElement = document.getElementById("root");
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-if (rootElement) {
-  ReactDOM.createRoot(rootElement).render(
-    <React.StrictMode>
-      <RouteApp />
-    </React.StrictMode>
-  );
-} else {
-  console.error("Root element not found");
-}
+root.render(
+  <Router>
+    <RouteApp />
+  </Router>
+);
+
+
+
+// const rootElement = document.getElementById("root");
+
+// if (rootElement) {
+//   ReactDOM.createRoot(rootElement).render(
+//     <React.StrictMode>
+//       <RouteApp />
+//     </React.StrictMode>
+//   );
+// } else {
+//   console.error("Root element not found");
+// }
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

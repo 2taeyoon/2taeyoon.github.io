@@ -22,7 +22,6 @@ module.exports = (argv) => {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
       alias: {
         Pub: path.resolve(__dirname, "public/")
-        // Assets: path.resolve(__dirname, 'src/assets/') // 'Assets' 별칭으로 src/assets 폴더 참조
       }
     },
     module: {
@@ -42,16 +41,8 @@ module.exports = (argv) => {
           exclude: /node_modules/,
           use: ["style-loader", "css-loader", "sass-loader"]
         },
-        // {
-        //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        //   type: 'asset/resource',
-        // },
-        // {
-        //   test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        //   type: 'asset/resource',
-        // }
 				{
-          test: /\.html$/i,
+          test: /\.html$/,
           use: [
             {
               loader: "html-loader",
@@ -64,33 +55,20 @@ module.exports = (argv) => {
               }
             }
           ]
-        },
+        }, // html loader 안 쓰면 패키지 삭제하자
         {
           test: /\.(jpg|jpeg|gif|png|svg|ico)?$/,
           use: [
             {
               loader: "url-loader",
               options: {
-                limit: 10000,
+                limit: 8192,
                 fallback: "file-loader",
                 name: "image/[name].[ext]"
               }
             }
           ]
         }
-        // {
-        //   test: /\.(woff|woff2|eot|ttf|otf)$/,
-        //   use: [
-        //     {
-        //       loader: 'url-loader',
-        //       options: {
-        //         limit: 10000,
-        //         fallback: 'file-loader',
-        //         name: 'fonts/[name].[ext]',
-        //       },
-        //     },
-        //   ],
-        // },
       ]
     },
     plugins: [
@@ -99,7 +77,7 @@ module.exports = (argv) => {
       }),
       new HtmlWebpackPlugin({
         template: "./public/index.html",
-				favicon: "./public/test.png",
+				favicon: "./public/favicon.ico",
         minify:
           process.env.NODE_ENV === "production"
             ? {
