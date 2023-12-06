@@ -1,14 +1,9 @@
 import React from "react";
-//import MyImage from "../../public/logo192.png";
 
 const RouteApp: React.FC = () => {
   return (
     <div className="RouteApp">
-      {/* <img
-        src={MyImage}
-        alt="img"
-      /> */}
-      <div>📸이미지를 출력해보자📸</div>
+			RouteApp
     </div>
   );
 };

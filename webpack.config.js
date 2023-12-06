@@ -41,21 +41,6 @@ module.exports = (argv) => {
           exclude: /node_modules/,
           use: ["style-loader", "css-loader", "sass-loader"]
         },
-				{
-          test: /\.html$/,
-          use: [
-            {
-              loader: "html-loader",
-              options: {
-                sources: {
-									list: [
-										{ tag: "link", attribute: "href", type: "src" },
-									]
-								}
-              }
-            }
-          ]
-        }, // html loader 안 쓰면 패키지 삭제하자
         {
           test: /\.(jpg|jpeg|gif|png|svg|ico)?$/,
           use: [
