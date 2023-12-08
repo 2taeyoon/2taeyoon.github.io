@@ -101,7 +101,7 @@ input {
   letter-spacing: 0;
   font: inherit;
   font-weight: 400;
-  font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+  font-family: "Pretendard", "Malgun Gothic", sans-serif;
 }
 
 article,
@@ -131,7 +131,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -147,8 +147,8 @@ a {
 input::-ms-clear {
   display: none;
 }
-input[type='number']::-webkit-inner-spin-button,
-input[type='number']::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
