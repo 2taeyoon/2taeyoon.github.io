@@ -2,9 +2,8 @@
 
 body {
   max-width: 100%;
-  color: #171717;
-  background: #fdfdfd;
-  line-height: 1;
+	background: #fdfdfd;
+	color: #232323;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -92,16 +91,26 @@ audio,
 video,
 textarea,
 input {
-  margin: 0;
+  /* margin: 0;
   padding: 0;
   border: 0;
   vertical-align: baseline;
   box-sizing: border-box;
-  word-break: keep-all;
-  letter-spacing: 0;
+	letter-spacing: 0;
+	line-height: 130%;
+	word-break: keep-all;
   font: inherit;
-  font-weight: 400;
+	font-size: 1.6rem;
+  font-weight: 400; */
   font-family: "Pretendard", "Malgun Gothic", sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6em;
 }
 
 article,
@@ -118,12 +127,12 @@ section {
   display: block;
 }
 
-ol,
+/* ol,
 ul,
 li {
   list-style: none;
-}
-blockquote,
+} */
+/* blockquote,
 q {
   quotes: none;
 }
@@ -133,11 +142,13 @@ q:before,
 q:after {
   content: "";
   content: none;
-}
+} */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -173,7 +184,7 @@ textarea:focus {
   outline: none;
 }
 
-p {
+/* p {
   letter-spacing: -0.5px;
   line-height: 130%;
-}
+} */

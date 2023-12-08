@@ -12,7 +12,7 @@ const routes = [
 const RouteApp = () => {
   return (
     <div className="RouteApp">
-			<Suspense fallback={<div>Loading...</div> /* 로딩 이미지*/ }>
+			<Suspense fallback={ <div>Loading...</div> /* 로딩 이미지*/ }>
 				<Routes>
 					{routes.map((route, index) => {
 						return (

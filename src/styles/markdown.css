@@ -1,0 +1,48 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.6;
+  color: #232323;
+  background-color: #f8f9fa;
+}
+
+a {
+  color: #1862ab;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* code {
+	padding: 3px 6px;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+	background-color: #e9ecef;
+	font-size: 1.6rem;
+	font-family: "Pretendard", "Malgun Gothic", sans-serif;
+} */
+
+/* pre {
+	padding: 16px;
+	background-color: #eee;
+	border-radius: 4px;
+	overflow-x: auto;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+pre > code {
+    background: none;
+		border: none;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+} */
