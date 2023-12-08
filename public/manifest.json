@@ -1,5 +1,5 @@
 {
-	"start_url": "../index.html",
+	"start_url": "./index.html",
   "short_name": "TYCODE",
   "name": "TYCODE",
   "display": "standalone",
@@ -7,24 +7,9 @@
   "background_color": "#ffffff",
   "icons": [
 		{
-      "src": "./favicon/favicon16.png",
-      "sizes": "16x16",
-			"type": "image/png"
-    },
-		{
-      "src": "./favicon/favicon32.png",
-      "sizes": "32x32",
-			"type": "image/png"
-    },
-		{
       "src": "./favicon/favicon.ico",
-      "sizes": "48x48",
+      "sizes": "96x96 64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
-    },
-		{
-      "src": "./favicon/favicon96.png",
-      "sizes": "96x96",
-			"type": "image/png"
     },
     {
       "src": "./favicon/favicon192.png",
