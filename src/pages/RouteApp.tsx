@@ -12,19 +12,19 @@ const routes = [
 const RouteApp = () => {
   return (
     <div className="RouteApp">
-			<Suspense fallback={ <div>Loading...</div> /* 로딩 이미지*/ }>
-				<Routes>
-					{routes.map((route, index) => {
-						return (
-							<Route
-								key={index}
-								path={route.path}
-								element={route.element}
-							/>
-						);
-					})}
-				</Routes>
-			</Suspense>
+      <Suspense fallback={<div>Loading...</div> /* 로딩 이미지*/}>
+        <Routes>
+          {routes.map((route, index) => {
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                element={route.element}
+              />
+            );
+          })}
+        </Routes>
+      </Suspense>
     </div>
   );
 };

@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from "react";
-import ReactMarkDown from "react-markdown"
+import ReactMarkdown from "react-markdown";
+import rehypeHighlight from "rehype-highlight";
 import "../../styles/markdown.css";
-
+import "../../styles/markdown_atom.css";
 
 export default function Blog() {
-	//const markdownContent = `# Hello, World!\n This is a **markdown** file rendered with React.`;
-  const [markdown, setMarkdown] = useState('');
+  const [markdown, setMarkdown] = useState("");
 
   useEffect(() => {
-    fetch(
-      './01.md'
-    )
-      .then(response => response.text())
-      .then(text => setMarkdown(text));
+    fetch("./01.md")
+      .then((response) => response.text())
+      .then((text) => setMarkdown(text));
   }, []);
 
   return (
-		<div>
-			<ReactMarkDown>{markdown}</ReactMarkDown>
-		</div>
-	)
+    <div style={{ width: "100%", justifyContent: "center", display: "flex" }}>
+      <div style={{ maxWidth: "768px", width: "100%" }}>
+        <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
+          {markdown}
+        </ReactMarkdown>
+      </div>
+    </div>
+  );
 }
