@@ -61,12 +61,26 @@ h6 {
 	font-weight: bold;
 }
 
+p {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
 blockquote {
 	display: block;
 	margin-block-start: 1em;
 	margin-block-end: 1em;
-	margin-inline-start: 40px;
 	margin-inline-end: 40px;
+	border-left: 3px solid #7085ff;
+	padding: 20px;
+	background-color: #f5f5f5;
+}
+
+blockquote > p, blockquote > ol, blockquote > ul {
+	margin: 0;
 }
 
 ol {
@@ -99,44 +113,36 @@ a:hover {
 }
 
 hr {
-	border: 1px solid #f5f5f5;
+	border: 1px solid #eeeeee;
 }
 
-blockquote {
-	border-left: 3px solid #7085ff;
-	padding: 20px;
-	background-color: #F8F9FA;
-}
-
-/* p {
-  margin-bottom: 15px;
-} */
-
-/* code {
+code {
 	padding: 3px 6px;
-  border: 1px solid #ced4da;
+  border: none;
   border-radius: 3px;
 	background-color: #e9ecef;
 	font-size: 1.6rem;
 	font-family: "Pretendard", "Malgun Gothic", sans-serif;
-} */
+}
 
-/* pre {
-	padding: 16px;
-	background-color: #eee;
+pre {
+	margin: 1em 0;
 	border-radius: 4px;
 	overflow-x: auto;
 	font-size: 1.6rem;
-	line-height: 1.5;
+	line-height: 150%;
 }
 
 pre > code {
-    background: none;
-		border: none;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-} */
+	border: none;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-wrap: normal;
+	hyphens: none;
+}
+
+img {
+	width: 100%;
+}
