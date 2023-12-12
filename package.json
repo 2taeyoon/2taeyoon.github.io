@@ -1,5 +1,5 @@
 {
-  "homepage": ".",
+  "homepage": "https://2taeyoon.github.io/",
   "name": "tycode",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +26,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
-		"format:c": "prettier --check \"src/**/*.{ts,tsx,js,jsx}\"",
+    "format:c": "prettier --check \"src/**/*.{ts,tsx,js,jsx}\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
