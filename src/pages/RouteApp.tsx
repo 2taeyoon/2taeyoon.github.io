@@ -1,11 +1,12 @@
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
+import NotFound from "./NotFound";
 
 const Home = lazy(() => import("./home/Home"));
 const Blog = lazy(() => import("./blog/Blog"));
 
 const routes = [
-  { path: "/", element: <Home /> },
+  { index: true, path: "/", element: <Home /> },
   { path: "/blog", element: <Blog /> }
 ];
 
@@ -23,6 +24,7 @@ const RouteApp = () => {
               />
             );
           })}
+					<Route path='*' element={ <NotFound/> }/>
         </Routes>
       </Suspense>
     </div>

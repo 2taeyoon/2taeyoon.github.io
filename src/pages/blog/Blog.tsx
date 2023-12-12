@@ -16,6 +16,7 @@ export default function Blog() {
   return (
     <div style={{ width: "100%", justifyContent: "center", display: "flex" }}>
       <div style={{ maxWidth: "768px", width: "100%" }}>
+				블로그페이지로 이동
         <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
           {markdown}
         </ReactMarkdown>
